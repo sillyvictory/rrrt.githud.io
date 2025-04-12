@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.service-card {
+  @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1;
+}
+
+.service-card img {
+  @apply w-full h-48 object-cover;
+}
+
+.price-table {
+  @apply w-full border-collapse bg-white rounded-xl overflow-hidden;
+}
+
+.price-table th,
+.price-table td {
+  @apply border-b border-gray-200 p-3 text-sm;
+}
+
+.price-table th {
+  @apply bg-blue-50 text-blue-900 font-semibold;
+}
+
+.price-table tr:last-child td {
+  @apply border-b-0;
+}
+
+/* Bottom Navigation Animation */
+nav button {
+  @apply transition-colors duration-200;
+}
+
+nav button:hover {
+  @apply text-blue-600;
+}
+
+/* LINE Button Animation */
+button[type="submit"] {
+  @apply transition-transform duration-200;
+}
+
+button[type="submit"]:active {
+  @apply transform scale-95;
+}
